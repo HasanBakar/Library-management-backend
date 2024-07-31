@@ -1,6 +1,21 @@
 import mongoose, { Document, Schema } from 'mongoose';
 import bcrypt from 'bcryptjs';
 
+export type IUserResponse = Omit<
+  IUser,
+  | 'password'
+  | 'comparePassword'
+  | '$assertPopulated'
+  | '$clearModifiedPaths'
+  | '$clone'
+  | string
+> & {
+  _id: unknown;
+  name: string;
+  email: string;
+  role: string;
+};
+
 export interface IUser extends Document {
   name: string;
   email: string;
@@ -13,7 +28,7 @@ const UserSchema: Schema<IUser> = new Schema(
   {
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
-    password: { type: String, required: true },
+    password: { type: String, required: true, select: false },
     role: {
       type: String,
       enum: ['patron', 'librarian', 'admin', 'reader'],

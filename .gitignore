@@ -22,6 +22,9 @@ coverage/
 .env
 .env.local
 .env.*.local
+.project.md
+.important_features_frontend.md
+.important_features_backend.md
 
 # IDE/editor specific files
 .vscode/
@@ -36,3 +39,4 @@ Thumbs.db
 # Optional: Ignore any temporary files
 tmp/
 temp/
+

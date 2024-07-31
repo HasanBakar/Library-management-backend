@@ -8,7 +8,7 @@
     "dev": "nodemon dist/index.js",
     "serve": "node dist/index.js",
     "lint": "eslint . --ext .ts",
-    "format": "prettier --write ."
+    "format": "npx prettier --write ."
   },
   "keywords": [
     "library",
@@ -30,6 +30,13 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/mongoose": "^5.11.97",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.2"
   }
 }

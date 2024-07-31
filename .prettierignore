@@ -1,0 +1,28 @@
+# Ignore artifacts:
+build
+coverage
+dist
+
+# Ignore all node_modules folders
+node_modules
+
+# Ignore specific files in src
+src/*.spec.ts
+
+# Ignore environment files
+.env
+
+# Ignore any logs
+*.log
+logs
+*.log*
+
+# Ignore IDE/editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db

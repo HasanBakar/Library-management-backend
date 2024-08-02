@@ -4,6 +4,7 @@ import cors from 'cors';
 import config from './config/config.js';
 import authRoutes from './routes/authRoutes.js';
 import protectedRoutes from './routes/protectedRoutes.js';
+import bookRoutes from './routes/bookRoutes.js';
 import connectDB from './config/db.js';
 
 const app = express();
@@ -15,8 +16,9 @@ app.use(bodyParser.json());
 connectDB();
 // Routes
 
-app.use('/api/auth', authRoutes);
-app.use('/api/protected', protectedRoutes);
+app.use('/api/v1/auth', authRoutes);
+app.use('/api/v1/protected', protectedRoutes);
+app.use('/api/v1/books', bookRoutes);
 
 app.get('/', (req: Request, res: Response) => {
   res.send('Hello, TypeScript with Express🎁🎁🎁!');
